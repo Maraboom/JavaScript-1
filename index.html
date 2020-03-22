@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--------------------------------ЗАДАНИЕ 1-------------------------------------------->
+
+    <!--<script>
+      'use strict'
+      //С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+      let n = 2;
+
+      while (n <= 100) {
+        console.log(n++);
+        for (let i = 2; i <= Math.round(n ** 1 / 2); i++) {
+          if (n % i == 0) {
+            n++;
+          }
+        }
+      }
+    </script>-->
+
+    <!--------------------------------ЗАДАНИЕ 2-------------------------------------------->
+
+    <!--<script>
+      "use strict";
+
+      //Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+
+      for (let i = 0; i <= 9; console.log(i++)) {}
+    </script>-->
+
+    <!--------------------------------ЗАДАНИЕ 3-------------------------------------------->
+
+    <!--<script>
+      "use strict";
+
+      //Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов.
+      let arr = [];
+      const x = 'x';
+      for (let i = 1; i <= 20; i++) {
+        arr.push(x);
+        console.log(arr);
+      }
+    </script>-->
+
+    <!---------------------------------------ЗАДАНИЕ 4------------------------------------------------>
+
+    <script>
+      "use strict";
+
+      //Реализовать RLE-сжатие: AAAB -> A3B, BCCDDDAXXXX -> BC2D3AX4
+
+      let unzipString = prompt("Введите произвольный набор букв:");
+      function rle(a) {
+        let i = 0;
+        let n = 1;
+        let zipString = "";
+        for (let i = 0; i < a.length; i++) {
+          if (a.charAt(i) == a.charAt(i + 1)) {
+            n++;
+          } else if (n > 1) {
+            zipString = zipString + (a.charAt(i) + n);
+            n = 1;
+          } else {
+            zipString = zipString + a.charAt(i);
+            n = 1;
+          }
+        }
+        return zipString;
+      }
+      console.log(unzipString);
+      console.log(rle(unzipString));
+    </script>
+  </body>
+</html>
