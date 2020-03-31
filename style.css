@@ -1,0 +1,23 @@
+.square {
+  outline: 1px solid black;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.square2 {
+  /*outline: 1px solid black;*/
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: salmon;
+}
+
+#chessBoard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 60px auto;
+  outline: 1px solid black;
+}
