@@ -6,13 +6,40 @@
     <title>Document</title>
   </head>
   <body>
+    <!-------------------------------Задание 1---------------------------------------------------------------------------->
     <script>
-      let Tc = prompt("Введите температуру в цельсиях");
-      let Tf = (9 / 5) * Tc + 32;
-      alert("Температура по фарингейту: " + Tf);
-      let name = "Василий";
-      let admin = alert(name);
-      alert(1000 + "108");
+      /*
+        a) написать функцию, который собирает все ссылки на видео с главной страницы в массив
+        - ищем элементы по id (#video-title-link) на странице youtube.com
+        - сохраняем в массив и возвращаем его из функции
+      */
+      function ytVideoLinks() {
+        let arr = [];
+        let link = document.querySelectorAll("#video-title-link");
+        link.forEach(function(item) {
+          arr.push(item.href);
+        });
+
+        return arr;
+      }
+      console.log(ytVideoLinks());
+
+      /*
+        b) функция, который отдает объект с ученикам
+        - ищем всех на странице geekbrains
+        - сохраняем в объект и функция возвращает объект
+      */
+
+      function students() {
+        let object = {};
+        let link = document.querySelectorAll(".mates-list__mate-name-block");
+        link.forEach(function(item) {
+          object[item.innerHTML] = item.href;
+        });
+
+        return object;
+      }
+      console.log(students());
     </script>
   </body>
 </html>
