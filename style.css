@@ -1,0 +1,92 @@
+body {
+  background: rgb(214, 250, 190);
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#chess {
+  width: 400px;
+  background: #fff;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+#gallery {
+  width: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  display: flex;
+  left: 0;
+  position: absolute;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.square.light {
+  background: #fff;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.square.dark {
+  background: #000;
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+
+.panel-image {
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+.main-image {
+  height: 150px;
+  width: 150px;
+  border: 1px solid #000;
+  margin: 10px auto;
+}
+
+.panel {
+  width: 180px;
+  height: 52px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  display: flex;
+}
+
+.array {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50px;
+}
+
+.array-left {
+  left: -100px;
+}
+
+.array-right {
+  right: -100px;
+}
+
+.panel-items {
+  position: relative;
+  margin: auto;
+}
+.square.click {
+  background-color: green;
+}
